@@ -1,7 +1,7 @@
 FROM node:argon
 
 ENV HOME /root
-ENV NODE_ENV production
+ENV NODE_ENV dev
 ENV ENGI_BIND_IP 0.0.0.0
 ENV RETHINKDB_HOST rethink
 ENV REDIS redis
@@ -24,3 +24,4 @@ RUN ./node_modules/.bin/gulp golive
 RUN node ./tools/editorBundler.js
 
 CMD forever ./app.js
+
